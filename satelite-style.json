@@ -1,0 +1,32 @@
+
+{
+  "version": 8,
+  "name": "BLACKLIST Satélite",
+  "sources": {
+    "esri-imagery": {
+      "type": "raster",
+      "tiles": [
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+      ],
+      "tileSize": 256,
+      "attribution": "Imagery © Esri and its imagery providers"
+    }
+  },
+  "layers": [
+    {
+      "id": "fondo-satelite",
+      "type": "background",
+      "paint": {
+        "background-color": "#101114"
+      }
+    },
+    {
+      "id": "imagen-satelital",
+      "type": "raster",
+      "source": "esri-imagery",
+      "paint": {
+        "raster-opacity": 1
+      }
+    }
+  ]
+}
