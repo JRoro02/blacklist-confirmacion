@@ -35,57 +35,6 @@
       }
     },
     {
-      "id": "carreteras-satelite",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "transportation",
-      "minzoom": 5,
-      "filter": [
-        "match",
-        ["get", "class"],
-        [
-          "motorway",
-          "trunk",
-          "primary",
-          "secondary",
-          "tertiary",
-          "minor",
-          "service",
-          "track",
-          "path",
-          "street",
-          "street_limited",
-          "pedestrian",
-          "living_street",
-          "residential",
-          "unclassified",
-          "road",
-          "bridleway",
-          "cycleway",
-          "footway"
-        ],
-        true,
-        false
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#E31825",
-        "line-opacity": 0.9,
-        "line-width": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          5, 0.4,
-          10, 1,
-          14, 2,
-          18, 4
-        ]
-      }
-    },
-    {
       "id": "nombres-carreteras-satelite",
       "type": "symbol",
       "source": "openmaptiles",
@@ -99,14 +48,7 @@
           ["get", "name"]
         ],
         "text-font": ["Noto Sans Regular"],
-        "text-size": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          8, 11,
-          12, 13,
-          16, 16
-        ],
+        "text-size": 12,
         "text-allow-overlap": false
       },
       "paint": {
